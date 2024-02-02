@@ -4,24 +4,25 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class Scenbyte : MonoBehaviour
+public class Options : MonoBehaviour
 {
-    public string nextScene; 
+    public string OptionScene;
 
     public Button scenbyte;
     // Start is called before the first frame update
-    void Start(){
+    void Start()
+    {
         Button btn = scenbyte.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
-        
+
     }
 
     // Update is called once per frame
-    void TaskOnClick(){
+    void TaskOnClick()
+    {
 
-        SceneManager.LoadScene(nextScene);
-        //Debug.Log("You have clicked the button!");
+        SceneManager.LoadScene(OptionScene);
+        //Debug.Log("Going to Option scenes!");
 
     }
 }
