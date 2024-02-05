@@ -164,7 +164,7 @@ namespace StarterAssets
 
         private void AimShoot()
         {
-            if (_input.isAiming && Grounded %% !_input.sprint)
+            if (_input.isAiming && Grounded && !_input.sprint)
             {
                 // Play Aiming Animation
             }
