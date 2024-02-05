@@ -49,6 +49,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DrawMelee",
+                    "type": "Button",
+                    "id": "d5f684a5-9977-4216-92c8-c27488a72677",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DrawGun",
+                    "type": "Button",
+                    "id": "fc9bd2a2-1324-4f28-a0c6-1f04b8be8bb4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "QuickFireGun",
+                    "type": "Button",
+                    "id": "6f3b82f0-16d8-426a-888b-0a121d39f098",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "bf80fdaa-a51e-4031-8fa5-4a8539981d3a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -236,6 +272,50 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "Aiming",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70e0f63d-b737-470b-87b6-13e4ea34d53a",
+                    "path": "R",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "DrawMelee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "158414a6-0b83-45c1-9c1f-f7311648374f",
+                    "path": "R",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "DrawGun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c150e8f4-6915-4e1a-945d-121d2e3c03b2",
+                    "path": "Q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuickFireGun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "40c409bb-1f51-47f0-b84a-947c0ddbe4c3",
+                    "path": "E",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
