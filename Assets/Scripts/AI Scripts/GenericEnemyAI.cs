@@ -37,7 +37,8 @@ public class genericEnemyAI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        Debug.Log(GameObject.FindGameObjectWithTag("Player").transform);
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         Agent = GetComponent<NavMeshAgent>();
     }
 
