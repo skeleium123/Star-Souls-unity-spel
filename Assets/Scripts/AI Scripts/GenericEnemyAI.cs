@@ -16,7 +16,7 @@ public class genericEnemyAI : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public float health;
+    public int health;
 
     //Patrolling
     public Vector3 walkPoint;

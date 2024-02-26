@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Player_Health : MonoBehaviour
 {
-    public int health = 100;
+    public float health = 10;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //InvokeRepeating(nameof(HealthRegen), 1f, 1f);
     }
+
+    /*void HealthRegen(int health)
+    {
+        health = health + 1;
+        Debug.Log("Healing");
+    }*/
 
     // Update is called once per frame
     void Update()
@@ -19,14 +25,18 @@ public class Player_Health : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
     }
-    void OnCollisionEnter(Collision collision)
+
+    /*public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "EnemyWeapon")
+        if (collision.gameObject.CompareTag("EnemyWeapon"))
         {
             health = health - 10;
         }
-    }
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            
+        }
+    }*/
 }
