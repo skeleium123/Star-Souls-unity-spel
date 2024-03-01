@@ -51,6 +51,20 @@ public class genericEnemyAI : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) chasePlayer();
         if (playerInAttackRange && playerInSightRange) attackPlayer();
 
+        
+
+    }
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("NoClimbObject"))
+        {
+            Agent.SetDestination(-transform.position);
+        }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Agent.SetDestination(-transform.position);
+        }
+        
     }
     private void Patroling()
     {
@@ -88,9 +102,9 @@ public class genericEnemyAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.up * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.forward * 8f, ForceMode.Impulse);
+            Rigidbody rb = Instantiate(projectile, transform.position + new Vector3(0, 2, 0), Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.up * 1f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
 
 
 

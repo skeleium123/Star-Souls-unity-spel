@@ -9,14 +9,14 @@ public class Player_Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InvokeRepeating(nameof(HealthRegen), 1f, 1f);
+        InvokeRepeating(nameof(HealthRegen), 1f, 1f);
     }
 
-    /*void HealthRegen(int health)
+    void HealthRegen(int health)
     {
         health = health + 1;
         Debug.Log("Healing");
-    }*/
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,7 +27,7 @@ public class Player_Health : MonoBehaviour
         }
     }
 
-    /*public void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("EnemyWeapon"))
         {
@@ -38,5 +38,5 @@ public class Player_Health : MonoBehaviour
         {
             
         }
-    }*/
+    }
 }
