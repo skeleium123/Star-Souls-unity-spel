@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SwordScript : MonoBehaviour
@@ -8,12 +9,15 @@ public class SwordScript : MonoBehaviour
     public CapsuleCollider swordCapsule;
     public Animator swrdAnimator;
     bool InCombat = false;
-
+    public GameObject weaponHand;
+    public GameObject rightHipHolster;
+    public Vector3 positionoffset;
     void Start()
     { 
-        swordCapsule = GetComponent<CapsuleCollider>();
-        swrdAnimator = GetComponent<Animator>();
-   
+        swordCapsule = GetComponentInChildren<CapsuleCollider>();
+        swrdAnimator = GetComponentInChildren<Animator>();
+        weaponHand = GameObject.Find("Right_Hand");
+        rightHipHolster = GameObject.Find("Right_UpperLeg");
     }
 
     // Update is called once per frame
@@ -27,14 +31,26 @@ public class SwordScript : MonoBehaviour
             {
                 InCombat = true;
                 swrdAnimator.SetBool("InCombat", true);
+                activestate();
             }
             else
             {
                 InCombat = false;
-                swrdAnimator.SetBool("Incombat", false);
+                swrdAnimator.SetBool("InCombat", false);
+                inactivestate();
             }
             
         }
+        
+    }
+    public void activestate()
+    {
+       this.transform.SetParent(weaponHand.transform);
+        this.transform.position = weaponHand.transform.position + positionoffset; 
+    }
+    public void inactivestate()
+    {
+        this.transform.SetParent(rightHipHolster.transform);
         
     }
 }
