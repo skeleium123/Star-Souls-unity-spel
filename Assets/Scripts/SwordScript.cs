@@ -12,6 +12,11 @@ public class SwordScript : MonoBehaviour
     public GameObject weaponHand;
     public GameObject rightHipHolster;
     public Vector3 positionoffset;
+
+    //Två transforms som refererar till platsen svärdet ska sitta på i själva scenen
+    public Transform Holstered;
+    public Transform Equipped;
+
     void Start()
     { 
         swordCapsule = GetComponentInChildren<CapsuleCollider>();
@@ -45,12 +50,15 @@ public class SwordScript : MonoBehaviour
     }
     public void activestate()
     {
-       this.transform.SetParent(weaponHand.transform);
-        this.transform.position = weaponHand.transform.position + positionoffset; 
+       transform.SetParent(weaponHand.transform, false);
+        
+        transform.position = Equipped.position;
+        transform.rotation = Equipped.rotation;
     }
     public void inactivestate()
     {
-        this.transform.SetParent(rightHipHolster.transform);
-        
+        transform.SetParent(rightHipHolster.transform, false);
+        transform.position = Holstered.position;
+        transform.rotation = Holstered.rotation;
     }
 }
