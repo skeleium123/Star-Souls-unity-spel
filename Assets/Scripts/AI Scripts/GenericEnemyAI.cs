@@ -1,3 +1,5 @@
+using Palmmedia.ReportGenerator.Core.Parser.Analysis;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -18,7 +20,14 @@ public class genericEnemyAI : MonoBehaviour
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
+        //this units transform will be given a transform value from the points array.
+        //call on the Random.Range() method inside the array
         agent.autoBraking = false;
+
+        agent.transform.position = points[0].position; 
+        agent.transform.position = points[destPoint].position;
+
+        //Random.Range();
 
         GotoNextPoint();
     }
