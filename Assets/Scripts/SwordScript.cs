@@ -13,7 +13,7 @@ public class SwordScript : MonoBehaviour
     public GameObject rightHipHolster;
     public Vector3 positionoffset;
 
-    //Två transforms som refererar till platsen svärdet ska sitta på i själva scenen
+    //Två transforms som refererar till platsen svärdet/vapnet ska sitta på i själva scenen
     public Transform Holstered;
     public Transform Equipped;
 
@@ -46,7 +46,13 @@ public class SwordScript : MonoBehaviour
             }
             
         }
-        
+      /*  if (Input.GetKeyDown((KeyCode)MouseButton.Left)) 
+        {
+            if (InCombat == false)
+            {
+
+            }
+        }*/
     }
     public void activestate()
     {
