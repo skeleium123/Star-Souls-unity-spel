@@ -15,6 +15,9 @@ public class genericEnemyAI : MonoBehaviour
     public int Conesightrange = 0;
     public int attackrage = 0;
     private NavMeshAgent agent;
+    public GameObject Playerobj;
+
+    public bool chasePlayer = false;
 
     void Start()
     {
@@ -28,19 +31,26 @@ public class genericEnemyAI : MonoBehaviour
 
         agent.autoBraking = false;
 
-        Func_playerDetection();
+        
 
         Func_GotoRandomPoint();
     }
 
     void Update()
     {
-
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        if (chasePlayer == true)
         {
-
-            Func_GotoRandomPoint();
+            Func_Chase();
         }
+        else
+        {
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+
+                Func_GotoRandomPoint();
+            }
+        }
+
     }
 
     void Func_GotoRandomPoint()
@@ -54,8 +64,11 @@ public class genericEnemyAI : MonoBehaviour
         agent.destination = points[randomIndex].position;
     }
 
-    void Func_playerDetection()
+    public void Func_Chase()
     {
+        
+        agent.SetDestination(Playerobj.transform.position);
+
         
 
     }
