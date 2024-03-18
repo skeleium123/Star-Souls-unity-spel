@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 379971861}
   - component: {fileID: 379971860}
   m_Layer: 8
-  m_Name: PlayerArmature (project)
+  m_Name: PlayerArmature (Project)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,43 +1309,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: -0.495
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -0.246
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7
+      value: 0.063
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 0.85702884
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0.51485413
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: 0.005612047
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: 0.019883633
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: 61.917
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 3.665
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 4.857
       objectReference: {fileID: 0}
     - target: {fileID: 7760806580109471895, guid: 5584ce8a0038ebd4b8e02433a1560050, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -2949,6 +2949,11 @@ CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 5715020920333284665, guid: d154a8c39617bde45a909f514e7a3fa3, type: 3}
   m_PrefabInstance: {fileID: 522547203}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1183051812 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2857142713089419496, guid: d154a8c39617bde45a909f514e7a3fa3, type: 3}
+  m_PrefabInstance: {fileID: 522547203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1208525381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3497,7 +3502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordCapsule: {fileID: 1183051810}
-  swrdAnimator: {fileID: 0}
+  swrdAnimator: {fileID: 1183051812}
   weaponHand: {fileID: 0}
   rightHipHolster: {fileID: 0}
   positionoffset: {x: 0, y: 0, z: 0}
